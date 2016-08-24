@@ -1,0 +1,25 @@
+mkdir TolgaGitHub
+cd TolgaGitHub
+
+// İnit Git
+git init
+// Chech Status :
+git status
+
+cp Some Files in it
+
+// After Add file check status again:
+git status
+
+// Add To Files Commit List : 
+git add ScriptTutorials/ 
+git add GitCommands.txt/
+
+// Check status after add commit list :
+git status
+
+// Set User Name and Email to commit (Just need one time): 
+git config --global user.email "tolga.tuna@hotmail.com"
+git config --global user.name "tolga.tuna"
+
+

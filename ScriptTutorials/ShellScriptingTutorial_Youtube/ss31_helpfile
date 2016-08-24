@@ -1,0 +1,466 @@
+CAT(1)                                            User Commands                                           CAT(1)
+
+
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s), or standard input, to standard output.
+
+       -A, --show-all
+              equivalent to -vET
+
+       -b, --number-nonblank
+              number nonempty output lines, overrides -n
+
+       -e     equivalent to -vE
+
+       -E, --show-ends
+              display $ at end of each line
+
+       -n, --number
+              number all output lines
+
+       -s, --squeeze-blank
+              suppress repeated empty output lines
+
+       -t     equivalent to -vT
+
+       -T, --show-tabs
+              display TAB characters as ^I
+
+       -u     (ignored)
+
+       -v, --show-nonprinting
+              use ^ and M- notation, except for LFD and TAB
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       With no FILE, or when FILE is -, read standard input.
+
+EXAMPLES
+       cat f - g
+              Output f's contents, then standard input, then g's contents.
+
+       cat    Copy standard input to standard output.
+
+AUTHOR
+       Written by Torbjorn Granlund and Richard M. Stallman.
+
+REPORTING BUGS
+       Report cat bugs to bug-coreutils@gnu.org
+       GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+       General help using GNU software: <http://www.gnu.org/gethelp/>
+       Report cat translation bugs to <http://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright  ©  2011  Free  Software  Foundation,  Inc.   License  GPLv3+:  GNU  GPL  version  3  or  later
+       <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to  the  extent
+       permitted by law.
+
+SEE ALSO
+       tac(1)
+
+       The full documentation for cat is maintained as a Texinfo manual.  If the info and cat programs are prop‐
+       erly installed at your site, the command
+
+              info coreutils 'cat invocation'
+
+       should give you access to the complete manual.
+
+
+
+GNU coreutils 8.12.197-032bb                     September 2011                                           CAT(1)
+DATE(1)                                           User Commands                                          DATE(1)
+
+
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       -d, --date=STRING
+              display time described by STRING, not `now'
+
+       -f, --file=DATEFILE
+              like --date once for each line of DATEFILE
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 07 Aug 2006 12:34:56 -0600
+
+       --rfc-3339=TIMESPEC
+              output date and time in RFC 3339 format.  TIMESPEC=`date', `seconds', or `ns' for date and time to
+              the indicated precision.  Date and time components are separated by  a  single  space:  2006-08-07
+              12:34:56-06:00
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+
+       %c     locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+
+       %C     century; like %Y, except omit last two digits (e.g., 20)
+
+       %d     day of month (e.g., 01)
+
+       %D     date; same as %m/%d/%y
+
+       %e     day of month, space padded; same as %_d
+
+       %F     full date; same as %Y-%m-%d
+
+       %g     last two digits of year of ISO week number (see %G)
+
+       %G     year of ISO week number (see %V); normally useful only with %V
+
+       %h     same as %b
+
+       %H     hour (00..23)
+
+       %I     hour (01..12)
+
+       %j     day of year (001..366)
+
+       %k     hour, space padded ( 0..23); same as %_H
+
+       %l     hour, space padded ( 1..12); same as %_I
+
+       %m     month (01..12)
+
+       %M     minute (00..59)
+
+       %n     a newline
+
+       %N     nanoseconds (000000000..999999999)
+
+       %p     locale's equivalent of either AM or PM; blank if not known
+
+       %P     like %p, but lower case
+
+       %r     locale's 12-hour clock time (e.g., 11:11:04 PM)
+
+       %R     24-hour hour and minute; same as %H:%M
+
+       %s     seconds since 1970-01-01 00:00:00 UTC
+
+       %S     second (00..60)
+
+       %t     a tab
+
+       %T     time; same as %H:%M:%S
+
+       %u     day of week (1..7); 1 is Monday
+
+       %U     week number of year, with Sunday as first day of week (00..53)
+
+       %V     ISO week number, with Monday as first day of week (01..53)
+
+       %w     day of week (0..6); 0 is Sunday
+
+       %W     week number of year, with Monday as first day of week (00..53)
+
+       %x     locale's date representation (e.g., 12/31/99)
+
+       %X     locale's time representation (e.g., 23:13:48)
+
+       %y     last two digits of year (00..99)
+
+       %Y     year
+
+       %z     +hhmm numeric time zone (e.g., -0400)
+
+       %:z    +hh:mm numeric time zone (e.g., -04:00)
+
+       %::z   +hh:mm:ss numeric time zone (e.g., -04:00:00)
+
+       %:::z  numeric time zone with : to necessary precision (e.g., -04, +05:30)
+
+       %Z     alphabetic time zone abbreviation (e.g., EDT)
+
+       By default, date pads numeric fields with zeroes.  The following optional flags may follow `%':
+
+       -      (hyphen) do not pad the field
+
+       _      (underscore) pad with spaces
+
+       0      (zero) pad with zeros
+
+       ^      use upper case if possible
+
+       #      use opposite case if possible
+
+       After  any  flags comes an optional field width, as a decimal number; then an optional modifier, which is
+       either E to use the locale's alternate representations if available, or O to use the  locale's  alternate
+       numeric symbols if available.
+
+EXAMPLES
+       Convert seconds since the epoch (1970-01-01 UTC) to a date
+
+              $ date --date='@2147483647'
+
+       Show the time on the west coast of the US (use tzselect(1) to find TZ)
+
+              $ TZ='America/Los_Angeles' date
+
+       Show the local time for 9AM next Friday on the west coast of the US
+
+              $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
+
+DATE STRING
+       The  --date=STRING  is a mostly free format human readable date string such as "Sun, 29 Feb 2004 16:21:42
+       -0800" or "2004-02-29 16:21:42" or even "next Thursday".  A date string may contain items indicating cal‐
+       endar  date,  time  of  day, time zone, day of week, relative time, relative date, and numbers.  An empty
+       string indicates the beginning of the day.  The date string format is more complex than is  easily  docu‐
+       mented here but is fully described in the info documentation.
+
+AUTHOR
+       Written by David MacKenzie.
+
+REPORTING BUGS
+       Report date bugs to bug-coreutils@gnu.org
+       GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+       General help using GNU software: <http://www.gnu.org/gethelp/>
+       Report date translation bugs to <http://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright  ©  2011  Free  Software  Foundation,  Inc.   License  GPLv3+:  GNU  GPL  version  3  or  later
+       <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to  the  extent
+       permitted by law.
+
+SEE ALSO
+       The  full  documentation  for  date is maintained as a Texinfo manual.  If the info and date programs are
+       properly installed at your site, the command
+
+              info coreutils 'date invocation'
+
+       should give you access to the complete manual.
+
+
+
+GNU coreutils 8.12.197-032bb                     September 2011                                          DATE(1)
+CAL(1)                                     BSD General Commands Manual                                    CAL(1)
+
+NAME
+     cal, ncal — displays a calendar and the date of Easter
+
+SYNOPSIS
+     cal [-3hjy] [-A number] [-B number] [[month] year]
+     cal [-3hj] [-A number] [-B number] -m month [year]
+     ncal [-3bhjJpwySM] [-A number] [-B number] [-s country_code] [[month] year]
+     ncal [-3bhJeoSM] [-A number] [-B number] [year]
+     ncal [-CN] [-H yyyy-mm-dd] [-d yyyy-mm]
+
+DESCRIPTION
+     The cal utility displays a simple calendar in traditional format and ncal offers an alternative layout,
+     more options and the date of Easter.  The new format is a little cramped but it makes a year fit on a 25x80
+     terminal.  If arguments are not specified, the current month is displayed.
+
+     The options are as follows:
+
+     -h      Turns off highlighting of today.
+
+     -J      Display Julian Calendar, if combined with the -e option, display date of Easter according to the
+             Julian Calendar.
+
+     -e      Display date of Easter (for western churches).
+
+     -j      Display Julian days (days one-based, numbered from January 1).
+
+     -m month
+             Display the specified month.  If month is specified as a decimal number, it may be followed by the
+             letter ‘f’ or ‘p’ to indicate the following or preceding month of that number, respectively.
+
+     -o      Display date of Orthodox Easter (Greek and Russian Orthodox Churches).
+
+     -p      Print the country codes and switching days from Julian to Gregorian Calendar as they are assumed by
+             ncal.  The country code as determined from the local environment is marked with an asterisk.
+
+     -s country_code
+             Assume the switch from Julian to Gregorian Calendar at the date associated with the country_code.
+             If not specified, ncal tries to guess the switch date from the local environment or falls back to
+             September 2, 1752.  This was when Great Britain and her colonies switched to the Gregorian Calen‐
+             dar.
+
+     -w      Print the number of the week below each week column.
+
+     -y      Display a calendar for the specified year.
+
+     -3      Display the previous, current and next month surrounding today.
+
+     -A number
+             Display the number of months after the current month.
+
+     -B number
+             Display the number of months before the current month.
+
+     -C      Switch to cal mode.
+
+     -N      Switch to ncal mode.
+
+     -d yyyy-mm
+             Use yyyy-mm as the current date (for debugging of date selection).
+
+     -H yyyy-mm-dd
+             Use yyyy-mm-dd as the current date (for debugging of highlighting).
+
+     -M      Weeks start on Monday.
+
+     -S      Weeks start on Sunday.
+
+     -b      Use oldstyle format for ncal output.
+
+     A single parameter specifies the year (1–9999) to be displayed; note the year must be fully specified: “cal
+     89” will not display a calendar for 1989.  Two parameters denote the month and year; the month is either a
+     number between 1 and 12, or a full or abbreviated name as specified by the current locale.  Month and year
+     default to those of the current system clock and time zone (so “cal -m 8” will display a calendar for the
+     month of August in the current year).
+
+     Not all options can be used together. For example “-3 -A 2 -B 3 -y -m 7” would mean: show me the three
+     months around the seventh month, three before that, two after that and the whole year.  ncal will warn
+     about these combinations.
+
+     A year starts on January 1.
+
+SEE ALSO
+     calendar(3), strftime(3)
+
+HISTORY
+     A cal command appeared in Version 5 AT&T UNIX.  The ncal command appeared in FreeBSD 2.2.6.  The output of
+     the cal command is supposed to be bit for bit compatible to the original Unix cal command, because its out‐
+     put is processed by other programs like CGI scripts, that should not be broken. Therefore it will always
+     output 8 lines, even if only 7 contain data. This extra blank line also appears with the original cal com‐
+     mand, at least on solaris 8
+
+AUTHORS
+     The ncal command and manual were written by Wolfgang Helbig ⟨helbig@FreeBSD.org⟩.
+
+BUGS
+     The assignment of Julian–Gregorian switching dates to country codes is historically naive for many coun‐
+     tries.
+
+     Not all options are compatible and using them in different orders will give varying results.
+
+BSD                                              March 14, 2009                                              BSD
+TOUCH(1)                                          User Commands                                         TOUCH(1)
+
+
+
+NAME
+       touch - change file timestamps
+
+SYNOPSIS
+       touch [OPTION]... FILE...
+
+DESCRIPTION
+       Update the access and modification times of each FILE to the current time.
+
+       A FILE argument that does not exist is created empty, unless -c or -h is supplied.
+
+       A FILE argument string of - is handled specially and causes touch to change the times of the file associ‐
+       ated with standard output.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a     change only the access time
+
+       -c, --no-create
+              do not create any files
+
+       -d, --date=STRING
+              parse STRING and use it instead of current time
+
+       -f     (ignored)
+
+       -h, --no-dereference
+              affect each symbolic link instead of any referenced file (useful only on systems that  can  change
+              the timestamps of a symlink)
+
+       -m     change only the modification time
+
+       -r, --reference=FILE
+              use this file's times instead of current time
+
+       -t STAMP
+              use [[CC]YY]MMDDhhmm[.ss] instead of current time
+
+       --time=WORD
+              change  the  specified  time:  WORD  is  access, atime, or use: equivalent to -a WORD is modify or
+              mtime: equivalent to -m
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       Note that the -d and -t options accept different time-date formats.
+
+DATE STRING
+       The --date=STRING is a mostly free format human readable date string such as "Sun, 29 Feb  2004  16:21:42
+       -0800" or "2004-02-29 16:21:42" or even "next Thursday".  A date string may contain items indicating cal‐
+       endar date, time of day, time zone, day of week, relative time, relative date,  and  numbers.   An  empty
+       string  indicates  the beginning of the day.  The date string format is more complex than is easily docu‐
+       mented here but is fully described in the info documentation.
+
+AUTHOR
+       Written by Paul Rubin, Arnold Robbins, Jim Kingdon, David MacKenzie, and Randy Smith.
+
+REPORTING BUGS
+       Report touch bugs to bug-coreutils@gnu.org
+       GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+       General help using GNU software: <http://www.gnu.org/gethelp/>
+       Report touch translation bugs to <http://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright  ©  2011  Free  Software  Foundation,  Inc.   License  GPLv3+:  GNU  GPL  version  3  or  later
+       <http://gnu.org/licenses/gpl.html>.
+       This  is  free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent
+       permitted by law.
+
+SEE ALSO
+       The full documentation for touch is maintained as a Texinfo manual.  If the info and touch  programs  are
+       properly installed at your site, the command
+
+              info coreutils 'touch invocation'
+
+       should give you access to the complete manual.
+
+
+
+GNU coreutils 8.12.197-032bb                     September 2011                                         TOUCH(1)
