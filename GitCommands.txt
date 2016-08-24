@@ -1,0 +1,110 @@
+mkdir TolgaGitHub
+cd TolgaGitHub
+
+// İnit Git
+git init
+// Chech Status :
+git status
+
+cp Some Files in it
+
+// After Add file check status again:
+git status
+
+// Add To Files Commit List : 
+git add ScriptTutorials/ 
+git add GitCommands.txt/
+
+// Check status after add commit list :
+git status
+
+// Set User Name and Email to commit (Just need one time): 
+git config --global user.email "tolga.tuna@hotmail.com"
+git config --global user.name "tolga.tuna"
+
+// First Commit : 
+git commit -m "Add Script and Git Steps"
+
+// Check Log (History):
+git log
+
+// Add the remote repository :
+git remote add origin https://github.com/tolgatuna/ShellScript
+
+// Push the remote repository :
+//  (The name of our remote is origin and the default local  
+// branch name is master. The -u tells Git to remember the 
+// parameters, so that next time we can simply run git push and  
+// Git will know what to do. Go ahead and push it!)
+// It will ask password :
+git push -u origin master
+
+// If you want to pull from GitHub :
+git pull origin master
+
+// Check Diff if any change exist :
+git diff HEAD
+
+// Add modified file to stage : 
+git add GitCommands.txt
+
+// Check Staged Differences : 
+git diff --staged
+
+// Remove Staged :
+git remove GitCommands.txt
+
+// Check Staged Differences : 
+git diff --staged
+
+// Files can be changed back to how they were at the last commit 
+//by using the command: git checkout -- <target>.
+git checkout -- GitCommands.txt
+
+// 1.18 Branching Out
+//   When developers are working on a feature or bug they'll 
+// often create a copy (aka. branch) of their code they can make 
+// separate commits to. Then when they're done they can merge 
+// this branch back into their main master branch
+git branch clean_up
+
+// Show Branches : 
+git branch
+
+// 1.19 Switching Branches
+//   You can switch branches using the git checkout <branch> 
+// command. 
+git checkout clean_up
+
+// 1.20 Removing Things
+// Ok, so you're in the clean_up branch.
+git rm 'GitCommands.txt'
+
+// 1.21 Commiting Branch Changes
+git commit -m "Remove GitCommands.txt"
+
+// NOT : NOW We Have GitCommand.txt in master branch but 
+// in the clean_up branch we don't have it.
+
+// 1.22 Switching Back to Master Branch 
+git checkout master 
+
+// 1.23 Preparing to Merge
+//   Alrighty, the moment has come when you have to merge your 
+// changes from the clean_up branch into the master branch.  
+// Take a deep breath, it's not that scary.
+//   We're already on the master branch, so we just need to 
+// tell Git to merge the clean_up branch into it:
+git merge clean_up
+
+// 1.24 Keeping Things Clean
+//   Congratulations! You just accomplished your first 
+// successful bugfix and merge. All that's left to do is clean 
+// up after yourself. Since you're done with the clean_up 
+// branch you don't need it anymore.
+//   You can use git branch -d <branch name> to delete a 
+// branch. Go ahead and delete the clean_up branch now
+git branch -d clean_up
+
+// Check Branches After delete : 
+git branch
