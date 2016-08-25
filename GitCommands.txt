@@ -108,3 +108,7 @@ git branch -d clean_up
 
 // Check Branches After delete : 
 git branch
+
+
+// Add Remote Origin : 
+git remote add origin https://github.com/tolgatuna/ShellScript
