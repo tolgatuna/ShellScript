@@ -161,7 +161,6 @@ git branch -d clean_up
 git branch
 
 
-<<<<<<< HEAD
 //   1.25 The Final Push
 //   Here we are, at the last step. I'm proud that you've made 
 // it this far, and it's been great learning Git with you. All 
@@ -169,7 +168,6 @@ git branch
 // been working on to your remote repository, and you're done!
 git push
 
-=======
+
 // Add Remote Origin : 
-git remote add origin https://github.com/tolgatuna/ShellScript
->>>>>>> c51b79c2677cfcb26391939e7cbee512b2c37362
+git remote add origin https://github.com/tolgatuna/ShellScript 
