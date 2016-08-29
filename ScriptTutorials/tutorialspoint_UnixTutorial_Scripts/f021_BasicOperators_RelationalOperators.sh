@@ -42,14 +42,14 @@ fi
 
 if [ $a -ge $b ]
 then
-   echo "$a -ge $b: a is greater or  equal to b"
+   echo "$a -ge $b: a is greater or equal to b"
 else
    echo "$a -ge $b: a is not greater or equal to b"
 fi
 
 if [ $a -le $b ]
 then
-   echo "$a -le $b: a is less or  equal to b"
+   echo "$a -le $b: a is less or equal to b"
 else
    echo "$a -le $b: a is not less or equal to b"
 fi

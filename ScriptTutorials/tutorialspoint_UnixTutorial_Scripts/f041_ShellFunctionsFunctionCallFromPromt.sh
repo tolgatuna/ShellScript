@@ -8,7 +8,7 @@
 #    Alternatively, you can group the definitions in a file, say test.sh, and then 
 # execute the file in the current shell by typing −
 #
-# $ script_name.sh
+# $ . script_name.sh
 #
 #    This has the effect of causing any functions defined inside test.sh to be read 
 # in and defined to the current shell as follows :
@@ -23,7 +23,6 @@
 number_one () 
 {
    echo "This is the first function speaking..."
-   number_two
 }
 
 number_two () 

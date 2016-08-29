@@ -6,4 +6,4 @@
 # -r	Reverse the order of sort.
 # -f	Sort upper- and lowercase together.
 # +x	Ignore first x fields when sorting.
-sort ~/ShellScript/README.md
+sort ~/ShellScripting/README.md

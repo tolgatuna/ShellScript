@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # String Operators :
-# =      Checks if the value of two operands are equal or not, if yes then condition becomes true. [ $a = $b ] is not true.
+# =   Checks if the value of two operands are equal or not, if yes then condition becomes true. [ $a = $b ] is not true.
 # !=  Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.  [ $a != $b ] is true.
 # -z  Checks if the given string operand size is zero. If it is zero length then it returns true.  [ -z $a ] is not true.
 # -n  Checks if the given string operand size is non-zero. If it is non-zero length then it returns true.   [ -n $a ] is not false.
