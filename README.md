@@ -9,3 +9,5 @@ Contains :
    (d: tutorialspoint_UnixTutorial_Scripts)	
 4. Beginner Git & GitHub Usage - How to create local branch & push to remote branch
    (-: GitCommands.txt)
+5. http://www.tecmint.com/20-funny-commands-of-linux-or-linux-is-fun-in-terminal/ - Funny Script Examples.
+   (d: http://www.tecmint.com/20-funny-commands-of-linux-or-linux-is-fun-in-terminal/)
