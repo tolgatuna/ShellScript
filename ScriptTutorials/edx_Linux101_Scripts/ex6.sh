@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Line Count Of Given Text : "
-wc -l <~/ScriptDeneme/someText.txt
+wc -l < ./ex6.sh

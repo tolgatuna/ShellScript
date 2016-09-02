@@ -15,14 +15,14 @@ else
    echo "$a != $b: a is equal to b"
 fi
 
-if [ $a -lt 100 -a $b -gt 15 ]
+if [ $a -lt 100 -a $b -gt 15 ]	# Same With -> [ $a -lt 100 ] && [ $b -gt 15 ] 
 then
    echo "$a -lt 100 -a $b -gt 15 : returns true"
 else
    echo "$a -lt 100 -a $b -gt 15 : returns false"
 fi
 
-if [ $a -lt 100 -o $b -gt 100 ]
+if [ $a -lt 100 -o $b -gt 100 ] # Same With -> [ $a -lt 100 ] || [ $b -gt 100 ]
 then
    echo "$a -lt 100 -o $b -gt 100 : returns true"
 else
