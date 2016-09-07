@@ -20,4 +20,4 @@ Contains :
 
 5. http://www.tecmint.com/20-funny-commands-of-linux-or-linux-is-fun-in-terminal/ - Funny Script Examples.
 
-   (d: http://www.tecmint.com/20-funny-commands-of-linux-or-linux-is-fun-in-terminal/)
+   (d: funnyLinuxComamnds_Scripts)
